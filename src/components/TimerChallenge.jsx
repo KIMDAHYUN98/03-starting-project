@@ -13,7 +13,7 @@ export default function TimeChallenge({ title, targetTime }) {
   function handleStart() {
     timer.current = setTimeout(() => {
       setTimeExpired(true);
-      dialog.current.showModal();
+      dialog.current.open(); // ResultModal 컴포넌트에서 정의한 함수
     }, targetTime * 1000);
     setTimerStarted(true);
   };
